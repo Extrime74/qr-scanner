@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get "/scanner", to: "scanner#index"
   get "/scan_result", to: "scan_results#show"
   post "/back_to_scanner", to: "scanner#back", as: :back_to_scanner
-
+  post "/save_scan_result", to: "scan_results#save"
+  get "/scan_result", to: "scan_results#show"
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker

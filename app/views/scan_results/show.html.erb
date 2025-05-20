@@ -9,9 +9,12 @@
 
     <div class="screenshot">
       <h3>Момент сканирования:</h3>
-      <img src="<%= @screenshot %>" alt="Скриншот QR-кода">
+      <% if @screenshot.present? && @screenshot.start_with?('data:image') %>
+        <img src="<%= @screenshot %>" alt="Скриншот QR-кода">
+      <% else %>
+        <p class="error">Скриншот недоступен</p>
+      <% end %>
     </div>
-  </div>
 
   <%= link_to 'Сканировать еще', scanner_path, class: 'scan-again-btn' %>
 
