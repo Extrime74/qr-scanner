@@ -1,0 +1,50 @@
+.scanner-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#qr-video {
+  width: 100%;
+  max-width: 500px;
+  background: #000;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+#camera-status {
+  margin: 15px 0;
+  font-size: 1.1em;
+  min-height: 20px;
+}
+
+.camera-overlay {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.scan-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  border: 3px solid rgba(0, 255, 0, 0.5);
+  border-radius: 8px;
+  .box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  #qr-video {
+    height: 60vh;
+  }
+
+  .scan-area {
+    width: 80%;
+    height: 30%;
+  }
+}

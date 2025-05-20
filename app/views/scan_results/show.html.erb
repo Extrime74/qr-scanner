@@ -1,0 +1,63 @@
+<div class="result-container">
+  <h1>Результат сканирования</h1>
+
+  <div class="result-content">
+    <div class="result-text">
+      <h3>Содержимое QR-кода:</h3>
+      <div class="qr-content"><%= @qr_text %></div>
+    </div>
+
+    <div class="screenshot">
+      <h3>Момент сканирования:</h3>
+      <img src="<%= @screenshot %>" alt="Скриншот QR-кода">
+    </div>
+  </div>
+
+  <%= link_to 'Сканировать еще', scanner_path, class: 'scan-again-btn' %>
+
+  <p class="scan-date">Сканировано: <%= @scan_date %></p>
+</div>
+
+<style>
+  .result-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+  }
+
+  .qr-content {
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    word-break: break-all;
+  }
+
+  .screenshot img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .scan-again-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4285f4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  .scan-date {
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.9em;
+  }
+</style>

@@ -1,0 +1,27 @@
+/* app/assets/stylesheets/application.tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кастомные стили для сканера */
+#qr-scanner-container {
+  @apply max-w-md mx-auto p-4;
+}
+
+#qr-video {
+  @apply w-full border mb-2;
+  max-height: 60vh;
+  background: #000;
+}
+
+#qr-canvas {
+  @apply hidden;
+}
+
+#scan-button {
+  @apply w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-4 transition-colors;
+}
+
+#qr-result {
+  @apply p-4 bg-gray-100 rounded break-all;
+}
