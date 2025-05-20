@@ -1,0 +1,17 @@
+<div class="max-w-md mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-4">QR Code Scanner</h1>
+
+  <!-- Видеопоток с камеры -->
+  <video id="qr-video" class="w-full border mb-2" autoplay playsinline></video>
+
+  <!-- Холст для захвата кадра -->
+  <canvas id="qr-canvas" class="hidden"></canvas>
+
+  <!-- Кнопка сканирования -->
+  <button id="scan-button" class="w-full bg-blue-500 text-white py-2 px-4 rounded mb-4">
+    Сканировать QR-код
+  </button>
+
+  <!-- Результат -->
+  <div id="qr-result" class="p-4 bg-gray-100 rounded"></div>
+</div>
